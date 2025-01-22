@@ -13,6 +13,7 @@ const secondsValue = document.querySelector('[data-seconds]');
 let userSelectedDate = null;
 let timerId = null;
 
+startButton.disabled = true;
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -49,6 +50,9 @@ startButton.addEventListener('click', () => {
       hoursValue.textContent = '00';
       minutesValue.textContent = '00';
       secondsValue.textContent = '00';
+
+      datetimePicker.disabled = false;
+      startButton.disabled = true;
       return;
     }
 
